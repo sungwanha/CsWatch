@@ -28,17 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
+            panel1 = new Panel();
             SuspendLayout();
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("맑은 고딕", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(17, 7);
+            label1.Name = "label1";
+            label1.Size = new Size(69, 15);
+            label1.TabIndex = 0;
+            label1.Text = "Stopwatch";
+            // 
+            // panel1
+            // 
+            panel1.BackColor = SystemColors.MenuText;
+            panel1.Location = new Point(17, 25);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(200, 2);
+            panel1.TabIndex = 1;
             // 
             // StopwatchPanel
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
+            Controls.Add(label1);
             Name = "StopwatchPanel";
             Size = new Size(297, 274);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
+        private Panel panel1;
     }
 }

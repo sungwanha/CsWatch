@@ -5,6 +5,9 @@ namespace Watch
 {
     public partial class Form1 : Form
     {
+        ucPanel.AlarmPanel alarmPanel = new ucPanel.AlarmPanel();
+        ucPanel.StopwatchPanel stopwatchPanel = new ucPanel.StopwatchPanel();
+        ucPanel.CalendarPanel calendarPanel = new ucPanel.CalendarPanel();
         public Form1()
         {
             InitializeComponent();
@@ -12,6 +15,7 @@ namespace Watch
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             timer1.Interval = 1000; // 1초마다 업데이트
             timer1.Start();
         }
@@ -25,22 +29,25 @@ namespace Watch
 
         private void 알람ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            pMain.Controls.Clear();
+            pMain.Controls.Add(alarmPanel);
         }
 
         private void 스탑워치ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            pMain.Controls.Clear();
+            pMain.Controls.Add(stopwatchPanel);
         }
 
         private void 캘린더ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            pMain.Controls.Clear();
+            pMain.Controls.Add(calendarPanel);
         }
 
         private void 아날로그시계ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            pMain.Controls.Clear();
         }
     }
 }
