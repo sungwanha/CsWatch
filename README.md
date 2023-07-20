@@ -26,8 +26,8 @@
 
 2. Stopwatch
    
-- start 클릭 : 원 내부에 위치한 스톱워치가 ui가 실행 (hh:mm:ss 형태)
-- stop 클릭 : 원 내부에 위치한 스톱워치가 정지(일시정지. stop 상태에서 start 누르면 재작동)
+- start 클릭 : 원 내부에 위치한 스톱워치 UI 실행 
+- stop 클릭 : 원 내부에 위치한 스톱워치가 정지
 - record 클릭 : 현재 작동하고 있는 스톱워치의 기록을 저장하는 별도의 공간(listBox : Lap(1등, 2등 ~) / Time(측정된 기록)
 - reset 클릭 : 스톱워치가 초기상태(00:00:00)로 돌아가고 동시에 listBox에 기록된 내용들 전부 초기화
 
@@ -39,7 +39,8 @@
 
 ### Prerequisites
 
-https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드
+https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드  
+
  
 ### Installing
 
@@ -47,8 +48,11 @@ Watch.exe 더블클릭.
 
 
 ## program instructions
+ <img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e8ab7632-5e59-4acd-9d38-aa6da8af6009" align="center" alt="GitHub Readme Stats" /> 
+ <img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/97efe342-9f85-4cb8-a6b0-b5dd8e93a202" align="center" alt="GitHub Readme Stats" />
+ 
 
-이미지 이미지 -->
+
 
 
 ## Deployment
