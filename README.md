@@ -48,11 +48,7 @@ Watch.exe 더블클릭.
 
 
 ## program instructions
- <img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e8ab7632-5e59-4acd-9d38-aa6da8af6009" align="center" alt="GitHub Readme Stats" /> 
- <img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/97efe342-9f85-4cb8-a6b0-b5dd8e93a202" align="center" alt="GitHub Readme Stats" />
- 
-
-
+ <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/fa5c69b8-4d3b-42de-967b-7eba97e68e9c" align="center" alt="GitHub Readme Stats" /> 
 
 
 ## Deployment
@@ -64,10 +60,6 @@ Watch.exe 더블클릭.
 
 
 ## Contributing
-
-
-
-## Authors
 
 
 
