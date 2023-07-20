@@ -43,18 +43,12 @@ https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드
  
 ### Installing
 
+Watch.exe 더블클릭.
 
 
+## program instructions
 
-## Running the tests
-
-
-
-### Break down into end to end tests
-
-
-
-### And coding style tests
+이미지 이미지 -->
 
 
 ## Deployment
@@ -69,14 +63,7 @@ https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드
 
 
 
-## Versioning
-
-
-
 ## Authors
-
-
-## License
 
 
 
