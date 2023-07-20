@@ -44,7 +44,24 @@
 
 ### Prerequisites
 
-https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드  
+- https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드  
+
+
+- Visual Studio 파일은 인터넷 또는 제한 영역에 있거나 파일에 웹 표시가 있으므로 처리할 수 없습니다.
+   1. Window PowerShell(관리자) 열기
+   
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6406e77c-91f7-4e6e-869c-24d70931448c" align="center" alt="GitHub Readme Stats" /> 
+
+
+   2. "gci -Recurse "C:\workspaces" | Unblock-File " 입력.
+       ※ workspaces는 다운로드 폴더의 위치.
+
+<img width="500px" src="https://github.com/sungwanha/CsWatch/assets/139833681/74f89d9a-f3df-432c-98ed-87f11538eb81" align="center" alt="GitHub Readme Stats" /> 
+
+
+- Newtonsoft.Json 이 없습니다.
+   1. 솔루션 탐색기 우클릭 -> 솔루션용 NuGet 패키지 관리 클릭
+   2. 뜨는 창에서 찾아보기를 누른 뒤 Newtonsoft.Json 검색 후 설치
 
  
 ### Installing
@@ -52,39 +69,80 @@ https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드
 Watch.exe 더블클릭.
 
 
-## program process.
+
+## program process & describe code.
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/fa5c69b8-4d3b-42de-967b-7eba97e68e9c" align="center" alt="GitHub Readme Stats" /> 
 
+```
 
-## Deployment
+```
 
+ <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" /> 
+ 
+```
 
+```
 
-## Built With
+ <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
 
+```
 
+```
 
-## Contributing
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
 
+```
 
+```
 
-## Acknowledgments
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
 
+```
 
+```
 
-   
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
 
+```
+
+```
+
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
+
+```
+
+```
+
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
+
+```
+
+```
+
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
+
+```
+
+```
+
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
+
+```
+
+```
+
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
+
+```
+
+```
+
+<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/77838a9b-9080-464d-a84b-76cccc7bcd67" align="center" alt="GitHub Readme Stats" />
+
+```
+
+```
+
+## Information
 ## Error
-Visual Studio 파일은 인터넷 또는 제한 영역에 있거나 파일에 웹 표시가 있으므로 처리할 수 없습니다.
-1. Window PowerShell(관리자) 열기
-   
-<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6406e77c-91f7-4e6e-869c-24d70931448c" align="center" alt="GitHub Readme Stats" /> 
-
-2. "gci -Recurse "C:\workspaces" | Unblock-File " 입력.
-   ※ workspaces는 다운로드 폴더의 위치.
-
-<img width="500px" src="https://github.com/sungwanha/CsWatch/assets/139833681/74f89d9a-f3df-432c-98ed-87f11538eb81" align="center" alt="GitHub Readme Stats" /> 
-
-Newtonsoft.Json 이 없습니다.
-1. 솔루션 탐색기 우클릭 -> 솔루션용 NuGet 패키지 관리 클릭
-2. 뜨는 창에서 찾아보기를 누른 뒤 Newtonsoft.Json 검색 후 설치
+ 
