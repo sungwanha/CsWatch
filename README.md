@@ -74,6 +74,6 @@ Visual Studio 파일은 인터넷 또는 제한 영역에 있거나 파일에 �
 1. Window PowerShell(관리자)
 2. gci -Recurse "C:\workspaces" | Unblock-File
 
-Newtonsoft.Json 가 없습니다.
+Newtonsoft.Json 이 없습니다.
 1. 솔루션 탐색기 우클릭 -> 솔루션용 NuGet 패키지 관리 클릭
 2. 뜨는 창에서 찾아보기를 누른 뒤 Newtonsoft.Json 검색 후 설치
