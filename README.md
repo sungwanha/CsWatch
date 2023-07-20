@@ -11,27 +11,29 @@
 ## Clock Function
 
 
-1. Real Time
+###  프로그램 상단에 RealTime 표시
 
-2. Alarm
+1. Alarm
 
+- 알람 설정 클릭 : 원하는 날짜, 시간을 입력하면 그 시간에 알람 울림.
+- 카운트 다운 기능 : 원하는 시, 분, 초 입력하면 0일 때 알람 울림.
 
-
-3. Stopwatch
+2. Stopwatch
    
 - start 클릭 : 원 내부에 위치한 스톱워치가 ui가 실행 (hh:mm:ss 형태)
 - stop 클릭 : 원 내부에 위치한 스톱워치가 정지(일시정지. stop 상태에서 start 누르면 재작동)
 - record 클릭 : 현재 작동하고 있는 스톱워치의 기록을 저장하는 별도의 공간(listBox : Lap(1등, 2등 ~) / Time(측정된 기록) / Run time(스톱워치가 작동한 전체 시간)
 - reset 클릭 : 스톱워치가 초기상태(00:00:00)로 돌아가고 동시에 listBox에 기록된 내용들 전부 초기화
 
-4. calendar
+3. calendar
 
-- 
+- 달력 UI가 열림
+- 스케줄 등록 : 특정 날짜에 스케줄을 등록할 수 있음
+- 스케줄 수정 : 스케줄이 있는 날짜에 수정 가능.
 
 ### Prerequisites
 
 
-```
 
 ### Installing
 
