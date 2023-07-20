@@ -1,12 +1,18 @@
 <p align="center">
  <img width="150px" src="https://simage.mujikorea.net/goods/31/13/90/74/4550344275696_N_N_400.jpg" align="center" alt="GitHub Readme Stats" />
  <h2 align="center">협동로봇 SI교육</h2>
- <p align="center">C#으로 프로그램 만들기 조장 : 하성완 조원 : 길성룡,김준호,정재현</p>
+ <p align="center">C#으로 프로그램 만들기 </p>
+  <p align="center">**조장 : 하성완 // 조원 : 길성룡,김준호,정재현 </p>
 </p>
 
 # Project Title
 
-여러 기능의 시계 만들기
+다양한 기능이 포함된 시계
+
+## Project introduction
+
+<p>"Simple is best" </p>
+실생활에 필요한 기능을 간단히 하나의 프로그램으로 만들자. 
 
 ## Clock Function
 
@@ -22,7 +28,7 @@
    
 - start 클릭 : 원 내부에 위치한 스톱워치가 ui가 실행 (hh:mm:ss 형태)
 - stop 클릭 : 원 내부에 위치한 스톱워치가 정지(일시정지. stop 상태에서 start 누르면 재작동)
-- record 클릭 : 현재 작동하고 있는 스톱워치의 기록을 저장하는 별도의 공간(listBox : Lap(1등, 2등 ~) / Time(측정된 기록) / Run time(스톱워치가 작동한 전체 시간)
+- record 클릭 : 현재 작동하고 있는 스톱워치의 기록을 저장하는 별도의 공간(listBox : Lap(1등, 2등 ~) / Time(측정된 기록)
 - reset 클릭 : 스톱워치가 초기상태(00:00:00)로 돌아가고 동시에 listBox에 기록된 내용들 전부 초기화
 
 3. calendar
