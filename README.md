@@ -110,7 +110,7 @@ class Calander
             string[] schedule_time; // 스케쥴이 담긴 일정을 저장해주는 배열 
             string[] schedule_info;// 일정에 대한 상세 스케쥴 내용을 저장하는 배열
             int last_schedule; // 위 배열의 크기를 저장(insert를 하기 위함)
-            string Path;
+            string Path; // 저장용 텍스트 파일의 경로
             public Calander(string path) // 클래스 생성자 : 객체 생성시에 자동으로 실행
             {
                 this.Path = path;
@@ -203,8 +203,8 @@ class Calander
         }
 ```
 - 캘린더는 위의 클래스를 통해 데이터를 관리하여 동작할 수 있도록 코드를 제작함.
-- Calender_Panel.cs 파일에 들어있는 해당 클래스는 달력에서 사용자가 선택한 날짜와 해당 패널이 추가적으로 띄우는 ScheduleForm.cs창에서 받아오는 스케줄 일정을 종합해 데이터를 배열화하여 저장한다. 
-
+- Calender_Panel.cs 파일에 들어있는 해당 클래스는 달력에서 사용자가 선택한 날짜와 해당 패널이 추가적으로 띄우는 ScheduleForm.cs창에서 받아오는 스케줄 일정을 종합해 데이터를 배열화하여 저장함. 
+- 저장한 데이터는 캘린더에서 일정 표시 등 다양한 기능에 사용됨
 
  
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6ba97985-9013-4bcc-ac7c-1e3f53ed2a89" align="center" alt="GitHub Readme Stats" />
