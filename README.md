@@ -59,40 +59,24 @@
 
 - 색깔 선택 : 배경 색을 5가지 색으로 변경할 수 있음.
 
+### Starting the program
+
+Watch.exe 더블클릭.
 
 ### Prerequisites
 
 - https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드  
 
 
-- Visual Studio 파일은 인터넷 또는 제한 영역에 있거나 파일에 웹 표시가 있으므로 처리할 수 없습니다.
-  
-   1. Window PowerShell(관리자) 열기
-   
-<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6406e77c-91f7-4e6e-869c-24d70931448c" align="center" alt="GitHub Readme Stats" /> 
+<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e33ddc1e-468f-49fd-8026-42dae91139a4" align="center" alt="GitHub Readme Stats" /> 
 
 
-   2. "gci -Recurse "C:\workspaces" | Unblock-File " 입력.
-       ※ workspaces는 다운로드 폴더의 위치.
+**초기 실행 방화벽으로 위 창이 나옴.** 
+**추가 정보 클릭**
 
-<img width="500px" src="https://github.com/sungwanha/CsWatch/assets/139833681/74f89d9a-f3df-432c-98ed-87f11538eb81" align="center" alt="GitHub Readme Stats" /> 
+<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b86aff8b-f04a-47ca-8887-002065c50bcb" align="center" alt="GitHub Readme Stats" /> 
 
-
-- Newtonsoft.Json 이 없습니다.
-
- 1. 솔루션 탐색기 우클릭 -> 솔루션용 NuGet 패키지 관리 클릭
-
-<img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b68e0c31-a2f1-4cb9-a687-df64ed4de2cb" />  
-   
- 2. 뜨는 창에서 찾아보기를 누른 뒤 Newtonsoft.Json 검색 후 설치
-
-<img width="700px" src="https://github.com/sungwanha/CsWatch/assets/139833681/42f386ae-6859-43c9-b1d4-3e595fa0fbd1" />  
-
-
-### Starting the program
-
-Watch.exe 더블클릭.
-
+**실행 클릭.** 
 
 
 ## program process & describe code.
@@ -138,5 +122,9 @@ Watch.exe 더블클릭.
 
 
 ## Information
+
+**개발기간 : 23.07.18 ~ 20**
+
+
 ## Error
  
