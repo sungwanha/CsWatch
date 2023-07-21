@@ -86,21 +86,125 @@ Watch.exe 더블클릭.
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/97cc1ade-bf7c-4862-8964-35ed534107f1" align="center" alt="GitHub Readme Stats" /> 
 
 ```
+WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseData);
 
+                        // 날씨 정보 출력
+                        string weatherdata = $"{weatherData.Weather[0].Description}";
+                        string tempdata = $"{weatherData.Main.Temp}°C";
+                        string humiddata = $"{weatherData.Main.Humidity}%";
+                        string citydata = $"{weatherData.Name}";
+                        string winddata = $"{weatherData.Wind.Speed} m/s";
+                        TempLabel.Text = tempdata;
+                        Weatherlabel.Text = weatherdata;
+                        HumidLabel.Text = humiddata;
+                        CityLabel.Text = citydata;
+
+private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            TimeLabel.Text = currentTime.ToString("hh:mm:ss tt"); // 현재 시간 표시
+            DateLabel.Text = currentTime.ToString("yyyy-MM-dd"); // 현재 날짜 표시
+        }
 ```
+- openweather의 api를 이용한 날씨 값 받아오기
+- interval 1000(1초)의 타이머 tick 이벤트 생성, 현재시간 불러오기
+
+
 
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/39f147e6-7394-4d6d-a7ec-d818a42fd5da" align="center" alt="GitHub Readme Stats" /> 
  
 ```
-
+private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime cTime = DateTime.Now;
+            if (cTime.Hour == tTime.Hour && cTime.Minute == tTime.Minute && flag == 1)
+            {
+                flag = 0;
+                MessageBox.Show("Alarm!!!!!");
+                
+            }
+            
+        }
 ```
+- interval 60000(1분)의 타이머 tick 이벤트 생성
+- 현재시간과 알람시간 비교후 일치하면 알람창.show
+
 
 
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e748ff7e-a58b-48b0-87d0-2891fec1a8b5" align="center" alt="GitHub Readme Stats"  />
 
 ```
 
-```
+private void Timer_Tick(object sender, EventArgs e)
+{
+    // 경과 시간을 타이머 Interval 만큼 더해줌
+    elapsedTime = elapsedTime.Add(TimeSpan.FromMilliseconds(timer.Interval));
+    
+    // UpdateTimeLabel 메서드를 호출하여 경과 시간을 UI에 업데이트
+    UpdateTimeLabel();
+}
+
+// start 기능 실행
+private void StartBtn_Click(object sender, EventArgs e)
+{
+  
+    if (!isRunning)  // isRunning : 타이머의 실행 여부 확인
+    {
+        timer.Start();
+        isRunning = true;
+    }
+}
+
+// stop 기능 실행
+private void StopBtn_Click(object sender, EventArgs e)
+{
+    
+    if (isRunning)   // isRunning : 타이머의 실행 여부 확인
+    {
+        timer.Stop();
+        isRunning = false;
+    }
+}
+
+// record 기능 실행
+private void RecordBtn_Click(object sender, EventArgs e)
+{
+  
+    if (isRunning)   // isRunning : 타이머의 실행 여부 확인
+    {
+        // 경과 시간을 포맷에 맞춰 문자열로 변환
+        string lapTime = elapsedTime.ToString(@"mm\:ss\:ff");
+
+        // 현재 랩 획수가(등수를 의미) 5 이하면 "합격", 아니면 "불합격"으로 lapResult 변수에 문자열 설정
+        string lapResult = lap_count <= 5 ? "합격" : "불합격";
+
+        // 기록 리스트 박스에 현재 랩의 정보를 추가
+        listBox1.Items.Add($"LAP{this.lap_count} {lapTime} - {lapResult}");
+    }
+    
+    // record 누를 때마다 랩 횟수 lap_count를 1 증가
+    this.lap_count++;
+}
+
+// 리셋 버튼 클릭(기록 초기화)
+private void ResetBtn_Click(object sender, EventArgs e)
+{
+    // 타이머를 정지하고, 상태를 isRunning으로 설정
+    timer.Stop();
+    isRunning = false;
+    
+    // 경과 시간을 초기화
+    elapsedTime = TimeSpan.Zero;
+
+    // 경과 시간을 UI에 업데이트
+    UpdateTimeLabel();
+
+    // 기록 리스트 박스를 비우고 랩 횟수를 1로 초기화
+    listBox1.Items.Clear();
+    lap_count = 1;
+}
+
+
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/15edc64c-0a63-47e3-b139-cd7f6c829781" align="center" alt="GitHub Readme Stats" />
 
@@ -206,26 +310,53 @@ class Calander
 - Calender_Panel.cs 파일에 들어있는 해당 클래스는 달력에서 사용자가 선택한 날짜와 해당 패널이 추가적으로 띄우는 ScheduleForm.cs창에서 받아오는 스케줄 일정을 종합해 데이터를 배열화하여 저장함. 
 - 저장한 데이터는 캘린더에서 일정 표시 등 다양한 기능에 사용됨
 
+
  
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6ba97985-9013-4bcc-ac7c-1e3f53ed2a89" align="center" alt="GitHub Readme Stats" />
 
 ```
+        private void InitializeTextValue()// 초기 파일 생성 및 파일 불러오기
+        {
+            if (!File.Exists(path))
+            {
+                // If testtext.txt does not exist, create an empty file.
+                File.WriteAllText(path, "");
+            }
 
+            string textValue = File.ReadAllText(path);
+            richTextBox1.Text = textValue;
+        }
+
+        private void TextPanel_Load(object sender, EventArgs e) // 이미 저장되어 있는 텍스트 파일 로드
+        {
+            InitializeTextValue();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)// richTextBox 컨트롤의 텍스트가 수정될 시
+                                                                         // 텍스트 파일에 수정된 텍스트를 저장하는 함수
+        {
+            File.WriteAllText(path, richTextBox1.Text);
+        }
 ```
-
+- 메모장 패널의 기능은 크게 3가지로 나뉜다.
+1. 초기에 저장용 텍스트 파일이 없을 시 텍스트 파일을 생성하는 기능(InitializeTextValue())
+2. 이미 저장되어 있는 텍스트 파일을 불러와 패널의 richTextBox 컨트롤에 띄우는 기능(TextPanel_Load())
+3. 사용자에 의해 richTextBox 컨트롤의 텍스트가 수정될 시 이를 이벤트로 인식하여 자동으로 텍스트 파일에 수정된 텍스트를 저장하는 기능(richTextBox1_TextChanged())
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b0e45fb6-a8d8-4880-90c9-f11da5a6831a" align="center" alt="GitHub Readme Stats" />
 
 ```
 
 ```
-
+- 델리게이트를 통한 이벤트 생성, 
+- 각 패널과 버튼을 public화 시켜 접근 할 수 있도록 설정
+- Theme의 버튼에 할당되어있는 이미지로 BackGroundImage 변경
 
 
 
 ## Information
 
-**개발기간 : 23.07.18 ~ 20**
+**개발기간 : 23.07.18 ~ 21**
 
 
 ## Error
