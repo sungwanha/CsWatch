@@ -134,7 +134,7 @@ private void timer1_Tick(object sender, EventArgs e)
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e748ff7e-a58b-48b0-87d0-2891fec1a8b5" align="center" alt="GitHub Readme Stats"  />
 
 ```
-// 타이머의 Interval 시간 간격마다 실행되는 이벤트 핸들러
+
 private void Timer_Tick(object sender, EventArgs e)
 {
     // 경과 시간을 타이머 Interval 만큼 더해줌
@@ -144,7 +144,7 @@ private void Timer_Tick(object sender, EventArgs e)
     UpdateTimeLabel();
 }
 
-// start 기능 실행행
+// start 기능 실행
 private void StartBtn_Click(object sender, EventArgs e)
 {
   
