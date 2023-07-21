@@ -106,8 +106,8 @@ private void timer1_Tick(object sender, EventArgs e)
             DateLabel.Text = currentTime.ToString("yyyy-MM-dd"); // 현재 날짜 표시
         }
 ```
--openweather의 api를 이용한 날씨 값 받아오기
--interval 1000(1초)의 타이머 tick 이벤트 생성, 현재시간 불러오기
+- openweather의 api를 이용한 날씨 값 받아오기
+- interval 1000(1초)의 타이머 tick 이벤트 생성, 현재시간 불러오기
 
 
 
@@ -126,8 +126,8 @@ private void timer1_Tick(object sender, EventArgs e)
             
         }
 ```
--interval 60000(1분)의 타이머 tick 이벤트 생성
--현재시간과 알람시간 비교후 일치하면 알람창.show
+- interval 60000(1분)의 타이머 tick 이벤트 생성
+- 현재시간과 알람시간 비교후 일치하면 알람창.show
 
 
 
@@ -180,7 +180,7 @@ private void Timer_Tick(object sender, EventArgs e)
             lap_count = 1;
         }
 ```
--뭘적을지 모르겠어요, 코드가 곧 설명
+- 뭘적을지 모르겠어요, 코드가 곧 설명
 
 
 
@@ -303,9 +303,9 @@ class Calander
 ```
 
 ```
--델리게이트를 통한 이벤트 생성, 
--각 패널과 버튼을 public화 시켜 접근 할 수 있도록 설정
--Theme의 버튼에 할당되어있는 이미지로 BackGroundImage 변경
+- 델리게이트를 통한 이벤트 생성, 
+- 각 패널과 버튼을 public화 시켜 접근 할 수 있도록 설정
+- Theme의 버튼에 할당되어있는 이미지로 BackGroundImage 변경
 
 
 
