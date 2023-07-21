@@ -140,12 +140,6 @@ private void Timer_Tick(object sender, EventArgs e)
             UpdateTimeLabel();
         }
 
-        private void UpdateTimeLabel()
-        {
-            // TimeLabel.Text = $"LAP{this.lap_count}" + elapsedTime.ToString(@"mm\:ss\:ff");
-            TimeLabel.Text = elapsedTime.ToString(@"mm\:ss\:ff");
-        }
-
         private void StartBtn_Click(object sender, EventArgs e)
         {
             if (!isRunning)
