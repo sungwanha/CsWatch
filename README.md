@@ -293,10 +293,33 @@ class Calander
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6ba97985-9013-4bcc-ac7c-1e3f53ed2a89" align="center" alt="GitHub Readme Stats" />
 
 ```
+        private void InitializeTextValue()// 초기 파일 생성 및 파일 불러오기
+        {
+            if (!File.Exists(path))
+            {
+                // If testtext.txt does not exist, create an empty file.
+                File.WriteAllText(path, "");
+            }
 
+            string textValue = File.ReadAllText(path);
+            richTextBox1.Text = textValue;
+        }
+
+        private void TextPanel_Load(object sender, EventArgs e) // 이미 저장되어 있는 텍스트 파일 로드
+        {
+            InitializeTextValue();
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)// richTextBox 컨트롤의 텍스트가 수정될 시
+                                                                         // 텍스트 파일에 수정된 텍스트를 저장하는 함수
+        {
+            File.WriteAllText(path, richTextBox1.Text);
+        }
 ```
-
-
+- 메모장 패널의 기능은 크게 3가지로 나뉜다.
+1. 초기에 저장용 텍스트 파일이 없을 시 텍스트 파일을 생성하는 기능(InitializeTextValue())
+2. 이미 저장되어 있는 텍스트 파일을 불러와 패널의 richTextBox 컨트롤에 띄우는 기능(TextPanel_Load())
+3. 사용자에 의해 richTextBox 컨트롤의 텍스트가 수정될 시 이를 이벤트로 인식하여 자동으로 텍스트 파일에 수정된 텍스트를 저장하는 기능(richTextBox1_TextChanged())
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b0e45fb6-a8d8-4880-90c9-f11da5a6831a" align="center" alt="GitHub Readme Stats" />
 
