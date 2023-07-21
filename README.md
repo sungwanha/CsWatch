@@ -14,6 +14,28 @@
 <p>"Simple is best" </p>
 실생활에 필요한 기능을 간단히 하나의 프로그램으로 만들자. 
 
+
+## Prerequisites
+
+- https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드  
+
+### Starting the program
+
+Watch.exe 더블클릭.
+
+<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e33ddc1e-468f-49fd-8026-42dae91139a4" align="center" alt="GitHub Readme Stats" /> 
+
+
+**초기 실행 방화벽으로 위 창이 나옴.** 
+**추가 정보 클릭**
+
+
+<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b86aff8b-f04a-47ca-8887-002065c50bcb" align="center" alt="GitHub Readme Stats" /> 
+
+
+**실행 클릭.** 
+
+
 ## Clock Function
 
 
@@ -25,8 +47,6 @@
 
 - 알람 설정 클릭 : 알람 설정창에 원하는 날짜, 시간 입력 후 설정 클릭.
                   설정 완료되면 가운데 알람 시간 확인. 
-- 카운트 다운 기능 : 원하는 시, 분, 초 입력하면 0일 때 알람 울림.
-
   
 2. Stopwatch
  
@@ -59,24 +79,6 @@
 
 - 색깔 선택 : 배경 색을 5가지 색으로 변경할 수 있음.
 
-### Starting the program
-
-Watch.exe 더블클릭.
-
-### Prerequisites
-
-- https://github.com/sungwanha/CsWatch --> code에 download.zip 다운로드  
-
-
-<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e33ddc1e-468f-49fd-8026-42dae91139a4" align="center" alt="GitHub Readme Stats" /> 
-
-
-**초기 실행 방화벽으로 위 창이 나옴.** 
-**추가 정보 클릭**
-
-<img width="400px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b86aff8b-f04a-47ca-8887-002065c50bcb" align="center" alt="GitHub Readme Stats" /> 
-
-**실행 클릭.** 
 
 
 ## program process & describe code.
@@ -93,7 +95,8 @@ Watch.exe 더블클릭.
 
 ```
 
- <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/95717a25-0883-43f8-834d-7b50d0797468" align="center" alt="GitHub Readme Stats"  />
+
+ <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e748ff7e-a58b-48b0-87d0-2891fec1a8b5" align="center" alt="GitHub Readme Stats"  />
 
 ```
 
