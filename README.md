@@ -144,33 +144,33 @@ private void Timer_Tick(object sender, EventArgs e)
     UpdateTimeLabel();
 }
 
-// 시작 버튼 클릭 
+// start 기능 실행행
 private void StartBtn_Click(object sender, EventArgs e)
 {
-    // 타이머가 실행 중이지 않을 때만 타이머를 시작하고, 상태를 isRunning으로 설정
-    if (!isRunning)
+  
+    if (!isRunning)  // isRunning : 타이머의 실행 여부 확인
     {
         timer.Start();
         isRunning = true;
     }
 }
 
-// 정지 버튼 클릭 
+// stop 기능 실행
 private void StopBtn_Click(object sender, EventArgs e)
 {
-    // 타이머가 실행 중일 때만 타이머를 정지하고, 상태를 isRunning으로 설정
-    if (isRunning)
+    
+    if (isRunning)   // isRunning : 타이머의 실행 여부 확인
     {
         timer.Stop();
         isRunning = false;
     }
 }
 
-// 기록 버튼 클릭
+// record 기능 실행
 private void RecordBtn_Click(object sender, EventArgs e)
 {
-    // 타이머가 실행 중일 때만 기록을 추가함
-    if (isRunning)
+  
+    if (isRunning)   // isRunning : 타이머의 실행 여부 확인
     {
         // 경과 시간을 포맷에 맞춰 문자열로 변환
         string lapTime = elapsedTime.ToString(@"mm\:ss\:ff");
