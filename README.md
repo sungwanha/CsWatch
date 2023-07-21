@@ -134,53 +134,75 @@ private void timer1_Tick(object sender, EventArgs e)
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e748ff7e-a58b-48b0-87d0-2891fec1a8b5" align="center" alt="GitHub Readme Stats"  />
 
 ```
+// 타이머의 Interval 시간 간격마다 실행되는 이벤트 핸들러
 private void Timer_Tick(object sender, EventArgs e)
-        {
-            elapsedTime = elapsedTime.Add(TimeSpan.FromMilliseconds(timer.Interval));
-            UpdateTimeLabel();
-        }
+{
+    // 경과 시간을 타이머 Interval 만큼 더해줌
+    elapsedTime = elapsedTime.Add(TimeSpan.FromMilliseconds(timer.Interval));
+    
+    // UpdateTimeLabel 메서드를 호출하여 경과 시간을 UI에 업데이트
+    UpdateTimeLabel();
+}
 
-        private void StartBtn_Click(object sender, EventArgs e)
-        {
-            if (!isRunning)
-            {
-                timer.Start();
-                isRunning = true;
-            }
-        }
+// 시작 버튼 클릭 
+private void StartBtn_Click(object sender, EventArgs e)
+{
+    // 타이머가 실행 중이지 않을 때만 타이머를 시작하고, 상태를 isRunning으로 설정
+    if (!isRunning)
+    {
+        timer.Start();
+        isRunning = true;
+    }
+}
 
-        private void StopBtn_Click(object sender, EventArgs e)
-        {
-            if (isRunning)
-            {
-                timer.Stop();
-                isRunning = false;
-            }
-        }
+// 정지 버튼 클릭 
+private void StopBtn_Click(object sender, EventArgs e)
+{
+    // 타이머가 실행 중일 때만 타이머를 정지하고, 상태를 isRunning으로 설정
+    if (isRunning)
+    {
+        timer.Stop();
+        isRunning = false;
+    }
+}
 
-        private void RecordBtn_Click(object sender, EventArgs e)
-        {
-            if (isRunning)
-            {
-                string lapTime = elapsedTime.ToString(@"mm\:ss\:ff");
-                string lapResult = lap_count <= 5 ? "합격" : "불합격";
-                listBox1.Items.Add($"LAP{this.lap_count} {lapTime} - {lapResult}");
-            }
-            // 버튼이 눌리면 count를 1씩 추가하는 코드 작성
-            this.lap_count++;
-        }
+// 기록 버튼 클릭
+private void RecordBtn_Click(object sender, EventArgs e)
+{
+    // 타이머가 실행 중일 때만 기록을 추가함
+    if (isRunning)
+    {
+        // 경과 시간을 포맷에 맞춰 문자열로 변환
+        string lapTime = elapsedTime.ToString(@"mm\:ss\:ff");
 
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-            timer.Stop();
-            isRunning = false;
-            elapsedTime = TimeSpan.Zero;
-            UpdateTimeLabel();
-            listBox1.Items.Clear();
-            lap_count = 1;
-        }
-```
-- 뭘적을지 모르겠어요, 코드가 곧 설명
+        // 현재 랩 획수가(등수를 의미) 5 이하면 "합격", 아니면 "불합격"으로 lapResult 변수에 문자열 설정
+        string lapResult = lap_count <= 5 ? "합격" : "불합격";
+
+        // 기록 리스트 박스에 현재 랩의 정보를 추가
+        listBox1.Items.Add($"LAP{this.lap_count} {lapTime} - {lapResult}");
+    }
+    
+    // record 누를 때마다 랩 횟수 lap_count를 1 증가
+    this.lap_count++;
+}
+
+// 리셋 버튼 클릭(기록 초기화)
+private void ResetBtn_Click(object sender, EventArgs e)
+{
+    // 타이머를 정지하고, 상태를 isRunning으로 설정
+    timer.Stop();
+    isRunning = false;
+    
+    // 경과 시간을 초기화
+    elapsedTime = TimeSpan.Zero;
+
+    // 경과 시간을 UI에 업데이트
+    UpdateTimeLabel();
+
+    // 기록 리스트 박스를 비우고 랩 횟수를 1로 초기화
+    listBox1.Items.Clear();
+    lap_count = 1;
+}
 
 
 
