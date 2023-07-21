@@ -108,6 +108,9 @@ private void timer1_Tick(object sender, EventArgs e)
 ```
 -openweather의 api를 이용한 날씨 값 받아오기
 -interval 1000(1초)의 타이머 tick 이벤트 생성, 현재시간 불러오기
+
+
+
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/39f147e6-7394-4d6d-a7ec-d818a42fd5da" align="center" alt="GitHub Readme Stats" /> 
  
 ```
@@ -125,6 +128,8 @@ private void timer1_Tick(object sender, EventArgs e)
 ```
 -interval 60000(1분)의 타이머 tick 이벤트 생성
 -현재시간과 알람시간 비교후 일치하면 알람창.show
+
+
 
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e748ff7e-a58b-48b0-87d0-2891fec1a8b5" align="center" alt="GitHub Readme Stats"  />
 
@@ -182,6 +187,8 @@ private void Timer_Tick(object sender, EventArgs e)
         }
 ```
 -뭘적을지 모르겠어요, 코드가 곧 설명
+
+
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/15edc64c-0a63-47e3-b139-cd7f6c829781" align="center" alt="GitHub Readme Stats" />
 
@@ -287,12 +294,14 @@ class Calander
 - Calender_Panel.cs 파일에 들어있는 해당 클래스는 달력에서 사용자가 선택한 날짜와 해당 패널이 추가적으로 띄우는 ScheduleForm.cs창에서 받아오는 스케줄 일정을 종합해 데이터를 배열화하여 저장함. 
 - 저장한 데이터는 캘린더에서 일정 표시 등 다양한 기능에 사용됨
 
+
  
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/6ba97985-9013-4bcc-ac7c-1e3f53ed2a89" align="center" alt="GitHub Readme Stats" />
 
 ```
 
 ```
+
 
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/b0e45fb6-a8d8-4880-90c9-f11da5a6831a" align="center" alt="GitHub Readme Stats" />
