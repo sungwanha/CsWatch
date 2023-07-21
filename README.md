@@ -86,21 +86,102 @@ Watch.exe 더블클릭.
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/97cc1ade-bf7c-4862-8964-35ed534107f1" align="center" alt="GitHub Readme Stats" /> 
 
 ```
+WeatherData weatherData = JsonConvert.DeserializeObject<WeatherData>(responseData);
 
+                        // 날씨 정보 출력
+                        string weatherdata = $"{weatherData.Weather[0].Description}";
+                        string tempdata = $"{weatherData.Main.Temp}°C";
+                        string humiddata = $"{weatherData.Main.Humidity}%";
+                        string citydata = $"{weatherData.Name}";
+                        string winddata = $"{weatherData.Wind.Speed} m/s";
+                        TempLabel.Text = tempdata;
+                        Weatherlabel.Text = weatherdata;
+                        HumidLabel.Text = humiddata;
+                        CityLabel.Text = citydata;
+
+private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime currentTime = DateTime.Now;
+            TimeLabel.Text = currentTime.ToString("hh:mm:ss tt"); // 현재 시간 표시
+            DateLabel.Text = currentTime.ToString("yyyy-MM-dd"); // 현재 날짜 표시
+        }
 ```
-
+-openweather의 api를 이용한 날씨 값 받아오기
+-interval 1000(1초)의 타이머 tick 이벤트 생성, 현재시간 불러오기
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/39f147e6-7394-4d6d-a7ec-d818a42fd5da" align="center" alt="GitHub Readme Stats" /> 
  
 ```
-
+private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime cTime = DateTime.Now;
+            if (cTime.Hour == tTime.Hour && cTime.Minute == tTime.Minute && flag == 1)
+            {
+                flag = 0;
+                MessageBox.Show("Alarm!!!!!");
+                
+            }
+            
+        }
 ```
-
+-interval 60000(1분)의 타이머 tick 이벤트 생성
+-현재시간과 알람시간 비교후 일치하면 알람창.show
 
  <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/e748ff7e-a58b-48b0-87d0-2891fec1a8b5" align="center" alt="GitHub Readme Stats"  />
 
 ```
+private void Timer_Tick(object sender, EventArgs e)
+        {
+            elapsedTime = elapsedTime.Add(TimeSpan.FromMilliseconds(timer.Interval));
+            UpdateTimeLabel();
+        }
 
+        private void UpdateTimeLabel()
+        {
+            // TimeLabel.Text = $"LAP{this.lap_count}" + elapsedTime.ToString(@"mm\:ss\:ff");
+            TimeLabel.Text = elapsedTime.ToString(@"mm\:ss\:ff");
+        }
+
+        private void StartBtn_Click(object sender, EventArgs e)
+        {
+            if (!isRunning)
+            {
+                timer.Start();
+                isRunning = true;
+            }
+        }
+
+        private void StopBtn_Click(object sender, EventArgs e)
+        {
+            if (isRunning)
+            {
+                timer.Stop();
+                isRunning = false;
+            }
+        }
+
+        private void RecordBtn_Click(object sender, EventArgs e)
+        {
+            if (isRunning)
+            {
+                string lapTime = elapsedTime.ToString(@"mm\:ss\:ff");
+                string lapResult = lap_count <= 5 ? "합격" : "불합격";
+                listBox1.Items.Add($"LAP{this.lap_count} {lapTime} - {lapResult}");
+            }
+            // 버튼이 눌리면 count를 1씩 추가하는 코드 작성
+            this.lap_count++;
+        }
+
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            isRunning = false;
+            elapsedTime = TimeSpan.Zero;
+            UpdateTimeLabel();
+            listBox1.Items.Clear();
+            lap_count = 1;
+        }
 ```
+-뭘적을지 모르겠어요, 코드가 곧 설명
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/15edc64c-0a63-47e3-b139-cd7f6c829781" align="center" alt="GitHub Readme Stats" />
 
@@ -219,7 +300,9 @@ class Calander
 ```
 
 ```
-
+-델리게이트를 통한 이벤트 생성, 
+-각 패널과 버튼을 public화 시켜 접근 할 수 있도록 설정
+-Theme의 버튼에 할당되어있는 이미지로 BackGroundImage 변경
 
 
 
