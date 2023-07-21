@@ -203,12 +203,13 @@ private void ResetBtn_Click(object sender, EventArgs e)
     listBox1.Items.Clear();
     lap_count = 1;
 }
-
+```
 
 
 <img width="300px" src="https://github.com/sungwanha/CsWatch/assets/139833681/15edc64c-0a63-47e3-b139-cd7f6c829781" align="center" alt="GitHub Readme Stats" />
 
 ```
+
 class Calander
         {
             string[] schedule_time; // 스케쥴이 담긴 일정을 저장해주는 배열 
@@ -305,6 +306,7 @@ class Calander
                 }
             }
         }
+        
 ```
 - 캘린더는 위의 클래스를 통해 데이터를 관리하여 동작할 수 있도록 코드를 제작함.
 - Calender_Panel.cs 파일에 들어있는 해당 클래스는 달력에서 사용자가 선택한 날짜와 해당 패널이 추가적으로 띄우는 ScheduleForm.cs창에서 받아오는 스케줄 일정을 종합해 데이터를 배열화하여 저장함. 
